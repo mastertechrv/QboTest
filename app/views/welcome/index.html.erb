@@ -1,0 +1,14 @@
+
+<h1>Quickbooks - Rails Test App Oauth2</h1>
+<code>gem 'quickbooks-ruby', git: 'https://github.com/ruckus/quickbooks-ruby.git', branch: '389-oauth2'</code>
+<hr>
+<!-- somewhere in your document include the Javascript -->
+<script type="text/javascript" src="https://appcenter.intuit.com/Content/IA/intuit.ipp.anywhere.js"></script>
+
+<!-- configure the Intuit object: 'grantUrl' is a URL in your application which kicks off the flow, see below -->
+<script>
+	intuit.ipp.anywhere.setup({menuProxy: '/path/to/blue-dot', grantUrl: 'authenticate_quickbooks_url'});
+</script>
+
+<!-- this will display a button that the user clicks to start the flow -->
+<ipp:connectToIntuit></ipp:connectToIntuit>
